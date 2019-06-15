@@ -6,8 +6,7 @@ import { AppComponent } from './app.component';
 import { SignComponent } from './components/sign/sign.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
-import { PagesComponent } from './components/pages/pages.component';
-import { DashboardComponent } from './components/pages/dashboard/dashboard.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -18,7 +17,8 @@ import { DashboardComponent } from './components/pages/dashboard/dashboard.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
