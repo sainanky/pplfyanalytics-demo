@@ -1,0 +1,11 @@
+.top-section img{
+    height: 100vh;
+}
+.txtHeading{
+    color: #9044d6;
+    font-weight: 500;
+}
+.list-style-none{
+    list-style: none;
+    width: 20%;
+}
