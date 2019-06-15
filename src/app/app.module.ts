@@ -14,6 +14,7 @@ import { HttpClient } from 'selenium-webdriver/http';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from './shared.module';
 import { AuthGuard } from './services/auth-guard.service';
+import { AlertModule } from 'ngx-bootstrap/alert';
 
 
 @NgModule({
@@ -27,7 +28,7 @@ import { AuthGuard } from './services/auth-guard.service';
   ],
   imports: [BrowserAnimationsModule,
     BrowserModule,ReactiveFormsModule,
-    AppRoutingModule,SharedModule
+    AppRoutingModule,SharedModule, AlertModule.forRoot()
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]

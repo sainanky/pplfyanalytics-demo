@@ -11,20 +11,29 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 .btn-green{
     background: #34f1b3;
+    cursor: pointer;
 }
 .btn-grey{
     color : #fff;;
     background: #adadad;
+    cursor: pointer;
 }
 .br-20{
     border-radius: 20px !important;
 }
 .theme-color{
     color: #9044d6;
+    cursor: pointer;
 }
 .disable-color{
     color: #9e9696;
+    cursor: pointer;
 }
 .font-12{
     font-size: 12px;
+}
+.alert-box{
+    position: absolute;
+    right: 0;
+    top: 30px;
 }

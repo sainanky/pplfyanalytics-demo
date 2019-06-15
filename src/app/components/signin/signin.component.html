@@ -1,9 +1,6 @@
 <div class="container-fluid body-container">
-  <alert class="alert-box" type="success" *ngIf="isSuccess">
-    <strong>Success!</strong> Saved Successfully.
-  </alert>
   <alert class="alert-box" type="danger" *ngIf="isError">
-    <strong>Sorry!</strong> An error occurred.
+    <strong>Sorry!</strong> your email and password are incorrect.
   </alert>
   <div class="row">
     <div class="offset-4 col-4 mt-5">
@@ -14,44 +11,31 @@
         <div class="col-12 container-box mt-3 p-3">
           <div class="row">
             <div class="col-4">
-              <span class="theme-color">Sign Up</span>
+              <span class="disable-color" routerLink="/signup">Sign Up</span>
             </div>
             <div class="col-4 offset-4 text-right">
-              <span class="disable-color" routerLink="/signin">Sign In</span>
+              <span class="theme-color">Sign In</span>
             </div>
           </div>
           <div class="row">
-            <form [formGroup]='signUpForm' class="example-form p-2 w-100">
-              <div class="col-12">
-                <mat-form-field class="example-full-width w-100">
-                  <input matInput placeholder="Full Name" formControlName='fullname'>
-                </mat-form-field>
-                <span class="font-12" *ngIf="!fullname.valid && fullname.touched">Please enter fullname</span>
-              </div>
-
+            <form [formGroup]='signInForm' class="example-form p-2 w-100">
               <div class="col-12">
                 <mat-form-field class="example-full-width w-100">
                   <input matInput placeholder="Username" formControlName='userName'>
                 </mat-form-field>
                 <span class="font-12" *ngIf="!userName.valid && userName.touched">Please enter username</span>
               </div>
-
-              <div class="col-12">
-                <mat-form-field class="example-full-width w-100">
-                  <input matInput placeholder="Email" formControlName='email'>
-                </mat-form-field>
-                <span class="font-12" *ngIf="!email.valid && email.touched">Please enter email</span>
-              </div>
-
               <div class="col-12">
                 <mat-form-field class="example-full-width w-100">
                   <input matInput type="password" placeholder="Password" formControlName='password'>
                 </mat-form-field>
                 <span class="font-12" *ngIf="!password.valid && password.touched">Please enter password</span>
               </div>
+              <div class="col-12 text-right">
+                <p class="disable-color">Forgot Password ?</p>
+              </div>
               <div class="col-12">
-                <button mat-raised-button class="btn-grey br-20 w-100" [disabled]="!signUpForm.valid" (click)="submit(signUpForm.value)">Sign Up</button>
-                <button mat-raised-button type="button" class="btn-grey br-20 mt-2 w-100" (click)="signUpForm.reset()">Reset</button>
+                <button mat-raised-button class="btn-grey br-20 w-100" (click)="submit(signInForm.value)">Sign In</button>
               </div>
             </form>
           </div>

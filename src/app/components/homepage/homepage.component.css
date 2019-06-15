@@ -9,3 +9,17 @@
     list-style: none;
     width: 20%;
 }
+@media (min-width: 481px) and (max-width: 767px) {
+    .list-style-none{
+        list-style: none;
+        width: 100%;
+    }
+}
+
+  
+@media (min-width: 320px) and (max-width: 480px) {
+    .list-style-none{
+        list-style: none;
+        width: 100%;
+    }
+}
